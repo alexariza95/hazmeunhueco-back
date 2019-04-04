@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Journey index{% endblock %}
+
+{% block body %}
+    <h1>Journey index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Arrivezone</th>
+                <th>Departurezone</th>
+                <th>PlusSpaces</th>
+                <th>BigSpaces</th>
+                <th>MediumSpaces</th>
+                <th>SmallSpaces</th>
+                <th>MiniSpaces</th>
+                <th>DepartureTime</th>
+                <th>ArriveTime</th>
+                <th>Description</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for journey in journeys %}
+            <tr>
+                <td>{{ journey.id }}</td>
+                <td>{{ journey.arrivezone }}</td>
+                <td>{{ journey.departurezone }}</td>
+                <td>{{ journey.plusSpaces }}</td>
+                <td>{{ journey.bigSpaces }}</td>
+                <td>{{ journey.mediumSpaces }}</td>
+                <td>{{ journey.smallSpaces }}</td>
+                <td>{{ journey.miniSpaces }}</td>
+                <td>{{ journey.departureTime ? journey.departureTime|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ journey.arriveTime ? journey.arriveTime|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ journey.description }}</td>
+                <td>
+                    <a href="{{ path('journey_show', {'id': journey.id}) }}">show</a>
+                    <a href="{{ path('journey_edit', {'id': journey.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="12">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('journey_new') }}">Create new</a>
+{% endblock %}

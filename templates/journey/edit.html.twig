@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Journey{% endblock %}
+
+{% block body %}
+    <h1>Edit Journey</h1>
+
+    {{ include('journey/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('journey_index') }}">back to list</a>
+
+    {{ include('journey/_delete_form.html.twig') }}
+{% endblock %}

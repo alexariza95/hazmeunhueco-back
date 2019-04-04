@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Journey{% endblock %}
+
+{% block body %}
+    <h1>Journey</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ journey.id }}</td>
+            </tr>
+            <tr>
+                <th>Arrivezone</th>
+                <td>{{ journey.arrivezone }}</td>
+            </tr>
+            <tr>
+                <th>Departurezone</th>
+                <td>{{ journey.departurezone }}</td>
+            </tr>
+            <tr>
+                <th>PlusSpaces</th>
+                <td>{{ journey.plusSpaces }}</td>
+            </tr>
+            <tr>
+                <th>BigSpaces</th>
+                <td>{{ journey.bigSpaces }}</td>
+            </tr>
+            <tr>
+                <th>MediumSpaces</th>
+                <td>{{ journey.mediumSpaces }}</td>
+            </tr>
+            <tr>
+                <th>SmallSpaces</th>
+                <td>{{ journey.smallSpaces }}</td>
+            </tr>
+            <tr>
+                <th>MiniSpaces</th>
+                <td>{{ journey.miniSpaces }}</td>
+            </tr>
+            <tr>
+                <th>DepartureTime</th>
+                <td>{{ journey.departureTime ? journey.departureTime|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>ArriveTime</th>
+                <td>{{ journey.arriveTime ? journey.arriveTime|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ journey.description }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('journey_index') }}">back to list</a>
+
+    <a href="{{ path('journey_edit', {'id': journey.id}) }}">edit</a>
+
+    {{ include('journey/_delete_form.html.twig') }}
+{% endblock %}
