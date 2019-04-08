@@ -1,4 +1,7 @@
 {
+    "container-interop/container-interop": {
+        "version": "1.2.0"
+    },
     "doctrine/annotations": {
         "version": "1.0",
         "recipe": {
@@ -59,6 +62,12 @@
             "config/packages/doctrine_migrations.yaml",
             "src/Migrations/.gitignore"
         ]
+    },
+    "doctrine/doctrine-module": {
+        "version": "2.1.9"
+    },
+    "doctrine/doctrine-orm-module": {
+        "version": "2.1.4"
     },
     "doctrine/event-manager": {
         "version": "v1.0.0"
@@ -531,10 +540,70 @@
     "webmozart/assert": {
         "version": "1.4.0"
     },
+    "zendframework/zend-authentication": {
+        "version": "2.6.0"
+    },
+    "zendframework/zend-cache": {
+        "version": "2.8.2"
+    },
     "zendframework/zend-code": {
         "version": "3.3.1"
     },
+    "zendframework/zend-config": {
+        "version": "3.2.0"
+    },
+    "zendframework/zend-escaper": {
+        "version": "2.6.0"
+    },
     "zendframework/zend-eventmanager": {
         "version": "3.2.1"
+    },
+    "zendframework/zend-filter": {
+        "version": "2.9.1"
+    },
+    "zendframework/zend-form": {
+        "version": "2.14.1"
+    },
+    "zendframework/zend-http": {
+        "version": "2.10.0"
+    },
+    "zendframework/zend-hydrator": {
+        "version": "2.4.1"
+    },
+    "zendframework/zend-inputfilter": {
+        "version": "2.10.0"
+    },
+    "zendframework/zend-json": {
+        "version": "3.1.0"
+    },
+    "zendframework/zend-loader": {
+        "version": "2.6.0"
+    },
+    "zendframework/zend-modulemanager": {
+        "version": "2.8.2"
+    },
+    "zendframework/zend-mvc": {
+        "version": "3.1.1"
+    },
+    "zendframework/zend-paginator": {
+        "version": "2.8.1"
+    },
+    "zendframework/zend-router": {
+        "version": "3.3.0"
+    },
+    "zendframework/zend-servicemanager": {
+        "version": "3.4.0"
+    },
+    "zendframework/zend-stdlib": {
+        "version": "3.2.1"
+    },
+    "zendframework/zend-uri": {
+        "version": "2.7.0"
+    },
+    "zendframework/zend-validator": {
+        "version": "2.12.0"
+    },
+    "zendframework/zend-view": {
+        "version": "2.11.2"
     }
 }
