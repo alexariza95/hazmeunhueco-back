@@ -1,6 +1,16 @@
 <?php
 
+/*
+ * This file is part of the Symfony package.
+ *
+ * (c) Fabien Potencier <fabien@symfony.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace App\Controller;
+
 use App\Entity\User;
 use App\Form\RegistrationFormType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -13,10 +23,6 @@ class RegistrationController extends AbstractController
 {
     /**
      * @Route("/register", name="app_register")
-     * @param Request $request
-     * @param UserPasswordEncoderInterface $passwordEncoder
-     * @param \Swift_Mailer $mailer
-     * @return Response
      */
     public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder, \Swift_Mailer $mailer): Response
     {
@@ -40,7 +46,7 @@ class RegistrationController extends AbstractController
             // do anything else you need here, like send an email
             $message = (new \Swift_Message('Hello Email'))
                 ->setFrom('alex1995ariza@gmail.com')
-                ->setTo($user->getEmail())
+                ->setTo('hola@hazmeunhueco.es')
                 ->setBody(
                     $this->renderView(
                     // templates/emails/registration.html.twig
